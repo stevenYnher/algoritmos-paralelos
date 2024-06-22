@@ -8,10 +8,13 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/bff/register", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "http://34.70.180.31:3001/bff/register",
+        {
+          username,
+          password,
+        }
+      );
       console.log(response.data);
     } catch (error) {
       console.error(error);

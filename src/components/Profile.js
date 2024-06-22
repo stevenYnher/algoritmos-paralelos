@@ -8,9 +8,12 @@ const Profile = () => {
     const fetchProfile = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await axios.get("http://localhost:3001/bff/profile", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await axios.get(
+          "http://34.70.180.31:3001/bff/profile",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
         setProfile(response.data);
       } catch (error) {
         console.error(error);

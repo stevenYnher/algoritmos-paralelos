@@ -8,7 +8,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/bff/login", {
+      const response = await axios.post("http://34.70.180.31:3001/bff/login", {
         username,
         password,
       });
