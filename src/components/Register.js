@@ -9,7 +9,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://34.70.180.31:3001/bff/register",
+        "http://nestjs-bff-env.eba-3p23djp6.us-east-2.elasticbeanstalk.com/bff/register",
         {
           username,
           password,

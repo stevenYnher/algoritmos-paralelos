@@ -9,7 +9,7 @@ const Profile = () => {
       const token = localStorage.getItem("token");
       try {
         const response = await axios.get(
-          "http://34.70.180.31:3001/bff/profile",
+          "http://nestjs-bff-env.eba-3p23djp6.us-east-2.elasticbeanstalk.com/bff/profile",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

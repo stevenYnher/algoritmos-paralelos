@@ -8,10 +8,13 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://34.70.180.31:3001/bff/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "http://nestjs-bff-env.eba-3p23djp6.us-east-2.elasticbeanstalk.com/bff/login",
+        {
+          username,
+          password,
+        }
+      );
       localStorage.setItem("token", response.data.access_token);
       console.log(response.data);
     } catch (error) {
